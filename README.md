@@ -6,6 +6,8 @@ This is a Spring Boot application with CRUD operations using MySQL for data pers
 
 [Maven Version - 3.9.2](https://maven.apache.org/download.cgi)
 
+[MySQL](https://dev.mysql.com/downloads/mysql/)
+
 ### Required Maven dependencies
  - Starter web
  - Starter Data JPA
@@ -20,7 +22,7 @@ This is a Spring Boot application with CRUD operations using MySQL for data pers
 
 ### Local Development
 
-If you want to run this app locally, then you need to download and install both Java 17 and Maven in your system.
+If you want to run this app locally, then you need to download and install Java 17, Maven and MySQL in your system.
 
 Once you have both of them, go to the terminal in your root directory and run the command `mvn install clean`. It should install all the maven packages written in pom file.
 
