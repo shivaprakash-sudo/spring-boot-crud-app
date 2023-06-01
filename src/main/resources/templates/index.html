@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple CRUD App</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css}">
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <h1>Welcome to User Management</h1>
+        <a class="btn btn-outline-primary" th:href="@{/users}">Manage All Users</a>
+    </div>
+
+    <!--bootstrap js-->
+    <script th:src="@{/webjars/bootstrap/5.1.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

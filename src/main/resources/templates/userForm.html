@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>[[${pageTitle}]]</title>
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css}">
+</head>
+<body>
+    <section class="container-fluid">
+        <div>
+            <h2 class="text-center mb-3">[[${pageTitle}]]</h2>
+            <form th:action="@{/users/save}" method="post" th:object="${user}" class="p-3 rounded-3 border border-secondary" style="max-width:40rem;margin:0 auto;">
+                <input type="hidden" name="id" th:field="*{id}">
+                <div class="mb-3 form-group row">
+                    <label for="firstName" class="col-sm-4 col-form-label">First Name:</label>
+                    <div class="col-sm-8">
+                        <input type="text" th:field="*{firstName}" class="form-control" id="firstName" aria-describedby="firstNameHelp" required>
+                    </div>
+                </div>
+                <div class="mb-3 form-group row">
+                    <label for="lastName" class="col-sm-4 col-form-label">Last Name:</label>
+                    <div class="col-sm-8">
+                    <input type="text" th:field="*{lastName}"  class="form-control" id="lastName" aria-describedby="lastNameHelp" required>
+                    </div>
+                </div>
+                <div class="mb-3 form-group row">
+                    <label for="email" class="col-sm-4 col-form-label">Email address:</label>
+                    <div class="col-sm-8">
+                    <input type="email" th:field="*{email}" class="form-control" id="email" aria-describedby="emailHelp" required>
+                    </div>
+                </div>
+                <div class="mb-3 form-group row">
+                    <label for="password" class="col-sm-4 col-form-label">Password:</label>
+                    <div class="col-sm-8">
+                    <input type="password" th:field="*{password}"  class="form-control" id="password" required minlength="8">
+                    </div>
+                </div>
+                <div class="mb-3 form-group row">
+                    <label class="col-sm-4" for="enableCheck">Enabled:</label>
+                    <div class="col-sm-8">
+                        <input type="checkbox" th:field="*{enabled}" class="form-check-input" id="enableCheck">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Save User</button>
+                    <a th:href="@{/users}" class="btn btn-secondary ms-4">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+<!--bootstrap js-->
+<script th:src="@{/webjars/bootstrap/5.1.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
